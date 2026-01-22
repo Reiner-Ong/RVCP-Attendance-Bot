@@ -147,7 +147,7 @@ async def update_week(update: Update, context: ContextTypes.DEFAULT_TYPE):
     week = int(sheet.cell(4, 8).value) 
     week += 5
     sheet.update_cell(4, 8, week)
-    actual_week = (week - 14) // 5 + 5
+    actual_week = (week - 14) // 5 + 2
     await update.message.reply_text(f"Week updated to {actual_week}.")
   else: 
     await update.message.reply_text(f"Sorry {user_name}, you do not have permission to update the week.")
